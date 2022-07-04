@@ -12,28 +12,22 @@ body {
 }
 @font-face {
   font-family: "TT Lakes";
-  src: url(fonts/TTLakes-Regular.ttf);
+  src: url(fonts/TTLakes-Medium.ttf);
 }
 
-main {
+aside {
+  position: fixed;
   min-width: 320px;
   width: 320px;
-  height: 100vh;
+  height: 100%;
 
   background-color: #ffffff;
-  margin: -16px auto 0px 0px;
+  margin: 0;
 
   box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02),
     16px 0px 52px rgba(14, 24, 80, 0.2);
-}
 
-header {
-  min-width: 320px;
-  min-height: 88px;
-  width: auto;
-  margin-top: 0;
-
-  background-color: white;
+  overflow-y: auto;
 }
 
 .container {
@@ -42,6 +36,13 @@ header {
   flex-wrap: nowrap;
   list-style: none;
   margin-left: -40px;
+
+  min-width: 320px;
+  min-height: 88px;
+  width: 320px;
+  margin-top: 0;
+
+  background-color: white;
 }
 
 .container__button-exit {
@@ -110,22 +111,15 @@ header {
 }
 
 /* КОНТАКТЫ */
-footer {
-  height: 240px;
-  min-width: 320px;
-  margin-top: 240px;
-
-  background-color: #ffffff;
-}
-
-.container-foot {
+.container-contacts {
   display: flex;
   justify-content: flex-start;
   list-style: none;
   margin-left: -40px;
+  margin-top: 200px;
 }
 
-.container-foot__call {
+.container-contacts__call {
   display: block;
   width: 40px;
   height: 40px;
@@ -134,7 +128,7 @@ footer {
 
   background-image: url(images/chatcopy.png);
 }
-.container-foot__chat {
+.container-contacts__chat {
   display: block;
   width: 40px;
   height: 40px;
@@ -143,7 +137,7 @@ footer {
 
   background-image: url(images/chat.png);
 }
-.container-foot__profile {
+.container-contacts__profile {
   display: block;
   width: 40px;
   height: 40px;
@@ -153,31 +147,37 @@ footer {
   background-image: url(images/profile.png);
 }
 
-.container-foot2 {
+.container-contacts2 {
   margin-left: -40px;
   list-style: none;
 }
-.container-foot2__mail {
+.container-contacts2__mail {
+  text-decoration: none;
+  color: #1b1c21;
   font-size: 16px;
   margin-left: 24px;
-  margin-bottom: 12px;
   line-height: 24px;
 }
-.container-foot2__tel {
+.container-contacts2__tel {
+  text-decoration: none;
+  color: #1b1c21;
   margin-left: 24px;
   font-size: 24px;
   font-weight: bold;
   line-height: 32px;
 }
+.container-contacts2 li:first-child {
+  margin-bottom: 12px;
+}
 
-.container-foot3 {
+.container-contacts3 {
   margin-left: -40px;
   margin-top: 40px;
   list-style: none;
   display: flex;
   justify-content: flex-start;
 }
-.container-foot3__button-ru {
+.container-contacts3__button-ru {
   padding: 0;
   width: 25px;
   height: 24px;
@@ -188,7 +188,7 @@ footer {
   margin-right: 7px;
   margin-left: 24px;
 }
-.container-foot3__button-en {
+.container-contacts3__button-en {
   padding: 0;
   width: 25px;
   height: 24px;
@@ -198,7 +198,7 @@ footer {
   line-height: 24px;
   margin-right: 7px;
 }
-.container-foot3__button-ch {
+.container-contacts3__button-ch {
   padding: 0;
   width: 25px;
   height: 24px;
@@ -207,6 +207,6 @@ footer {
   font-size: 16px;
   line-height: 24px;
 }
-.container-foot3 li button:focus {
+.container-contacts3 li button:focus {
   color: #7e7e82;
 }
